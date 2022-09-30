@@ -6,7 +6,7 @@
 /*   By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:58:54 by ecabanas          #+#    #+#             */
-/*   Updated: 2022/09/20 16:07:08 by ecabanas         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:17:15 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -18,7 +18,6 @@ void	ft_push(t_stack **head, int value)
 {
 	t_stack	*new;
 
-	//new = malloc (sizeof * new);
 	new = ft_calloc(1, sizeof * new);
 	if (!new)
 		return ;
@@ -92,9 +91,9 @@ void	min_value(t_stack **head, int index, int tmp)
  */
 int	max_index(t_stack **head)
 {
-	int	tmp;
-	int	i;
-	t_stack *new;
+	int		tmp;
+	int		i;
+	t_stack	*new;
 
 	i = 1;
 	new = *head;

@@ -6,7 +6,7 @@
 /*   By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:59:09 by ecabanas          #+#    #+#             */
-/*   Updated: 2022/09/15 12:09:37 by ecabanas         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:18:09 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -52,7 +52,7 @@ void	free_stack(t_stack **head)
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void		*r;
+	void			*r;
 	unsigned char	*p;
 
 	r = malloc(count * size);

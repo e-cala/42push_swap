@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   radix.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/30 16:13:44 by ecabanas          #+#    #+#             */
+/*   Updated: 2022/09/30 16:13:47 by ecabanas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	get_max_bits(t_stack **head)
 {
 	int		max;
 	int		max_bits;
-	t_stack		*tmp;
+	t_stack	*tmp;
 
 	tmp = *head;
 	max = tmp->index;
@@ -23,10 +35,10 @@ int	get_max_bits(t_stack **head)
 void	radix_sort(t_stack **head_a, t_stack **head_b)
 {
 	t_stack	*tmp;
-	int	i;
-	int	j;
-	int	size;
-	int	max_bits;
+	int		i;
+	int		j;
+	int		size;
+	int		max_bits;
 
 	tmp = *head_a;
 	i = 0;

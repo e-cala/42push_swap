@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/30 16:07:35 by ecabanas          #+#    #+#             */
+/*   Updated: 2022/09/30 16:07:41 by ecabanas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -8,17 +20,17 @@
 
 typedef struct s_stack
 {
-	int		value;
-	int		index;
+	int				value;
+	int				index;
 	struct s_stack	*next;
 }			t_stack;
 
 /*	stack_functions.c	*/
 void	ft_push(t_stack **head, int value);
 void	print_linkedlist(t_stack *head);
-int	nodes_in_stack(t_stack *head);
+int		nodes_in_stack(t_stack *head);
 void	min_value(t_stack **head, int index, int tmp);
-int	max_index(t_stack **head);
+int		max_index(t_stack **head);
 
 /*	stack_utils.c		*/
 t_stack	*is_last_node(t_stack *head);
@@ -26,30 +38,30 @@ t_stack	*is_before_last_node(t_stack *head);
 void	push_all_save_three(t_stack **head_a, t_stack **head_b);
 
 /*	sort.c			*/
-int	sort(t_stack **head_a, t_stack **head_b);
+int		sort(t_stack **head_a, t_stack **head_b);
 void	sort_three(t_stack **head);
 void	sort_four(t_stack **head_a, t_stack **head_b);
 void	sort_five(t_stack **head_a, t_stack **head_b);
 
 /*	sort_utils.c		*/
-int	get_position(t_stack **head, int val);
-int	stack_is_sorted(t_stack *head);
+int		get_position(t_stack **head, int val);
+int		stack_is_sorted(t_stack *head);
 void	rra_pb_ra_ra(t_stack **head_a, t_stack **head_b);
 void	ra_pb_rra(t_stack **head_a, t_stack **head_b);
 void	pb_ra(t_stack **head_a, t_stack **head_b);
 
 /*	radix.c			*/
 void	radix_sort(t_stack **head_a, t_stack **head_b);
-int	get_max_bits(t_stack **head);
+int		get_max_bits(t_stack **head);
 
 /*	input_check.c	*/
-int	is_duplicate(t_stack *head);
-int	ft_atoi(const char *s, int *value);
-int	check_input(int argc, char **argv, t_stack **head);
+int		is_duplicate(t_stack *head);
+int		ft_atoi(const char *s, int *value);
+int		check_input(int argc, char **argv, t_stack **head);
 
 /*	utils.c			*/
 void	err_message(void);
-int	is_digit(char c);
+int		is_digit(char c);
 void	ft_putstr(char *s);
 void	*ft_calloc(size_t count, size_t size);
 void	free_stack(t_stack **head);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotate.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/30 16:14:53 by ecabanas          #+#    #+#             */
+/*   Updated: 2022/09/30 16:15:40 by ecabanas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*rotate:
@@ -10,8 +22,8 @@
 void	rotate(t_stack **head)
 {
 	t_stack	*tmp;
-	int	i;
-	int	size;
+	int		i;
+	int		size;
 
 	tmp = *head;
 	i = 0;
@@ -36,7 +48,7 @@ void	rotate(t_stack **head)
 void	ra(t_stack **head)
 {
 	rotate(head);
-	ft_putstr("ra\n");	
+	ft_putstr("ra\n");
 }
 
 /*rb:
