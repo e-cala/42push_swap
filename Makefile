@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/02 12:15:58 by ecabanas          #+#    #+#              #
+#    Updated: 2022/10/02 12:16:02 by ecabanas         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME	=	push_swap
 SRC		=	input_check.c main.c push.c utils.c\
 			radix.c reverse_rotate.c rotate.c sort.c \

@@ -6,7 +6,7 @@
 /*   By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 16:07:35 by ecabanas          #+#    #+#             */
-/*   Updated: 2022/10/02 11:45:51 by ecabanas         ###   ########.fr       */
+/*   Updated: 2022/10/02 12:16:53 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct s_stack
 {
 	int				value;
 	int				index;
-	struct s_stack	*next; //hola
+	struct s_stack	*next;
 }			t_stack;
 
 /*	stack_functions.c	*/
