@@ -13,7 +13,7 @@
 #include "push_swap.h"
 
 /*Push:
- * Pushes the first element from stack src into stack dst.
+ * Pushes the first element from stack src into stack dst. ss
  */
 void	push(t_stack **src, t_stack **dst)
 {
