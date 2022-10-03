@@ -9,8 +9,7 @@
 /*   Updated: 2022/09/30 16:14:37 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 /*reverse_rotate:
  */

@@ -9,7 +9,7 @@
 /*   Updated: 2022/10/02 11:45:06 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 /*main:
  * Checks if the input is correct, in wihch case it initializes stacks a and b,
@@ -37,7 +37,6 @@ int	main(int argc, char *argv[])
 	printf("\n");
 	printf("2.Stack B: ");
 	printf("\n");*/
-	//print_linkedlist(stack_a);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

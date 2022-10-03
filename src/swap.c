@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 /*Swap:
  * Swaps the first 2 elements at the top of the stack,

@@ -9,7 +9,7 @@
 /*   Updated: 2022/09/30 16:18:09 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	err_message(void)
 {

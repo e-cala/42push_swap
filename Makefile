@@ -11,18 +11,23 @@
 # **************************************************************************** #
 
 NAME	=	push_swap
+SRC_PATH	=	src/
 SRC		=	input_check.c main.c push.c utils.c\
 			radix.c reverse_rotate.c rotate.c sort.c \
 			sort_utils.c stack_functions.c swap.c \
 			stack_utils.c
-OBJ		= 	$(SRC:.c=.o)
-DEPS	=	$(addsuffix .d, $(basename $(notdir $(SRC))))
+SRCS		=	$(addprefix $(SRC_PATH), $(SRC))
+OBJ		= 	$(SRCS:.c=.o)
+DEPS	=	$(addsuffix .d, $(basename $(SRCS)))
 
-HEADER	=	push_swap.h
+HEADER	=	includes/push_swap.h
 CC		= 	gcc
 CFLAGS	= 	-Wall -Wextra -Werror -MMD
 RM		= 	rm -f
-CHECKER	= 	./push_swap $(ARG) | ./checker_Mac $(ARG)
+CHECKER	= 	./push_swap $(ARG) | ./checker/checker_linux $(ARG)
+
+##Revisar esta variable de entorno y ver como funciona
+SHELL	=	/bin/sh
 
 COLOUR_GREEN=\033[0;32m
 COLOUR_RED=\033[0;31m
@@ -47,8 +52,8 @@ re: fclean all
 #######################################################################################################################################
 tests:				test0 test1 test2 test3 test4 test5 test100 test500 re
 
-test0:				$(NAME)
-					$(eval ARG = $(shell jot -r 0 -1000 1000))
+test0:				$(NAM)
+					$(eval ARG = $($(SHELL) jot -r 0 -1000 1000))
 					@echo "$(COLOUR_BLUE)[0]$(COLOUR_END)   `$(CHECKER)` \t Instructions: " `./push_swap $(ARG) | wc -l` " \t $(ARG)"
 #					@ ./push_swap $(ARG)
 

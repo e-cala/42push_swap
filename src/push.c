@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 /*Push:
  * Pushes the first element from stack src into stack dst. ss

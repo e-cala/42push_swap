@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 t_stack	*is_last_node(t_stack *head)
 {
@@ -35,9 +35,9 @@ void	push_all_save_three(t_stack **head_a, t_stack **head_b)
 	i = 0;
 	pushed = 0;
 	size_a = nodes_in_stack(*head_a);
-	while (i < size_a - 3)
+	while (i <= size_a - 3)
 	{
-		if ((*head_a)->value <= size_a / 2)
+		if ((*head_a)->index <= size_a / 2)
 		{
 			pb(head_a, head_b);
 			pushed++;
@@ -52,3 +52,29 @@ void	push_all_save_three(t_stack **head_a, t_stack **head_b)
 		pushed++;
 	}
 }
+/*void	push_all_save_three(t_stack **head_a, t_stack **head_b)
+{
+	int	i;
+	int	pushed;
+	int	size_a;
+
+	i = 0;
+	pushed = 0;
+	size_a = nodes_in_stack(*head_a);
+	while (i < size_a - 3)
+	{
+		if ((*head_a)->index <= size_a / 2)
+		{
+			pb(head_a, head_b);
+			pushed++;
+		}
+		else
+			ra(head_a);
+		i++;
+	}
+	while (size_a - pushed > 3)
+	{
+		pb(head_a, head_b);
+		pushed++;
+	}
+}*/

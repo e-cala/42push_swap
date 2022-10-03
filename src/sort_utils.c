@@ -9,8 +9,7 @@
 /*   Updated: 2022/10/02 11:48:56 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	get_position(t_stack **head_a, int val)
 {

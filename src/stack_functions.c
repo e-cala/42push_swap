@@ -9,7 +9,7 @@
 /*   Updated: 2022/09/30 16:17:15 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 /*ft_push:
  * Creates a new element and pushes it on top of the stack
@@ -38,7 +38,7 @@ void	print_linkedlist(t_stack *head)
 {
 	while (head != NULL)
 	{
-		printf("%i ", head->value);
+		printf("%i(%i) ", head->value, head->index);
 		head = head->next;
 	}
 }

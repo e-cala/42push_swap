@@ -9,7 +9,7 @@
 /*   Updated: 2022/09/15 12:10:28 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 /*is_duplicate:
  * Checks the entire linked list for duplicate numbers
