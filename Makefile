@@ -50,9 +50,14 @@ fclean: clean
 re: fclean all
 
 #######################################################################################################################################
-tests:				test0 test1 test2 test3 test4 test5 test100 test500 re
+tests:				test0 test1 test2 test3 test4 test5 test100 test500
+#make ARG="1 3 4 2" custom
+custom:				$(NAME)
+					$(eval ARG = $())
+					@echo "$(COLOUR_BLUE)[custom]$(COLOUR_END)   `$(CHECKER)` \t Instructions: " `./push_swap $(ARG) | wc -l` " \t $(ARG)"
+					@ ./push_swap $(ARG)
 
-test0:				$(NAM)
+test0:				$(NAME)
 					$(eval ARG = $($(SHELL) jot -r 0 -1000 1000))
 					@echo "$(COLOUR_BLUE)[0]$(COLOUR_END)   `$(CHECKER)` \t Instructions: " `./push_swap $(ARG) | wc -l` " \t $(ARG)"
 #					@ ./push_swap $(ARG)
@@ -73,7 +78,7 @@ test3:				$(NAME)
 #					@ ./push_swap $(ARG)
 
 test4:				$(NAME)
-					$(eval ARG = $(shell jot -r 4 -1000 1000))
+#					$(eval ARG = $(shell jot -r 4 -1000 1000))
 					@echo "$(COLOUR_BLUE)[4]$(COLOUR_END)   `$(CHECKER)` \t Instructions: " `./push_swap $(ARG) | wc -l` " \t $(ARG)"
 #					@ ./push_swap $(ARG)
 

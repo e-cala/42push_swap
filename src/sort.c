@@ -44,33 +44,17 @@ void	sort_three(t_stack **head)
 
 void	sort_four(t_stack **head_a, t_stack **head_b)
 {
-	push_all_save_three(head_a, head_b);
+	min_index(head_a, head_b, 1);
 	sort_three(head_a);
-	if (get_position(head_a, (*head_b)->index) == 0)
-		pb(head_b, head_a);
-	else if (get_position(head_a, (*head_b)->index) == 1)
-		ra_pb_rra(head_a, head_b);
-	else if (get_position(head_a, (*head_b)->index) == 2)
-		rra_pb_ra_ra(head_a, head_b);
-	else if (get_position(head_a, (*head_b)->index) == 3)
-		pb_ra(head_a, head_b);
+	pa(head_b, head_a);
 }
 
 void	sort_five(t_stack **head_a, t_stack **head_b)
 {
-	sort_four(head_a, head_b);
-	if (get_position(head_a, (*head_b)->index) == 0)
-		pb(head_b, head_a);
-	else if (get_position(head_a, (*head_b)->index) == 1)
-		ra_pb_rra(head_a, head_b);
-	else if (get_position(head_a, (*head_b)->index) == 2)
-	{
-		ra(head_a);
-		ra_pb_rra(head_a, head_b);
-		rra(head_a);
-	}
-	else if (get_position(head_a, (*head_b)->index) == 3)
-		rra_pb_ra_ra(head_a, head_b);
-	else if (get_position(head_a, (*head_b)->index) == 4)
-		pb_ra(head_a, head_b);
+	
+	min_index(head_a, head_b, 1);
+	min_index(head_a, head_b, 2);
+	sort_three(head_a);
+	pa(head_b, head_a);
+	pa(head_b, head_a);
 }

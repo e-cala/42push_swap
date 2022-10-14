@@ -66,7 +66,7 @@ int	ft_atoi(const char *s, int *value)
 		num = (num * 10) + s[i] - '0';
 		i++;
 	}
-	if ((sign * num) > INT_MAX || (sign * num) <= INT_MIN)
+	if ((sign * num) >= INT_MAX || (sign * num) <= INT_MIN)
 		return (0);
 	*value = sign * num;
 	return (1);

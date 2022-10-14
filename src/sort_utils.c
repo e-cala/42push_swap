@@ -11,23 +11,6 @@
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
-int	get_position(t_stack **head_a, int val)
-{
-	t_stack	*tmp;
-	int		i;
-
-	tmp = *head_a;
-	i = 0;
-	while (tmp)
-	{
-		if (val < tmp->index)
-			break ;
-		i++;
-		tmp = tmp->next;
-	}
-	return (i);
-}
-
 int	stack_is_sorted(t_stack *head)
 {
 	while (head->next)
@@ -39,23 +22,26 @@ int	stack_is_sorted(t_stack *head)
 	return (1);
 }
 
-void	ra_pb_rra(t_stack **head_a, t_stack **head_b)
+void	min_index(t_stack **head_a, t_stack **head_b, int i)
 {
-	ra(head_a);
-	pb(head_b, head_a);
-	rra(head_a);
-}
+	int	j;
+	int	size_a;
+	t_stack	*tmp;
 
-void	rra_pb_ra_ra(t_stack **head_a, t_stack **head_b)
-{
-	rra(head_a);
-	pb(head_b, head_a);
-	ra(head_a);
-	ra(head_a);
-}
-
-void	pb_ra(t_stack **head_a, t_stack **head_b)
-{
-	pb(head_b, head_a);
-	ra(head_a);
+	j = 0;
+	size_a = nodes_in_stack(*head_a);
+	tmp = *head_a;
+	while(tmp->index != i)
+	{
+		tmp = tmp->next;
+		j++;
+	}
+	while ((*head_a)->index != i)
+	{		
+		if (j <= size_a / 2)
+			ra(head_a);
+		else if (j > size_a / 2)
+			rra(head_a);
+	}
+	pb(head_a, head_b);
 }
