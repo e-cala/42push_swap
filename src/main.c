@@ -6,7 +6,7 @@
 /*   By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:58:01 by ecabanas          #+#    #+#             */
-/*   Updated: 2022/10/02 11:45:06 by ecabanas         ###   ########.fr       */
+/*   Updated: 2022/10/16 17:21:17 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -30,13 +30,7 @@ int	main(int argc, char *argv[])
 		err_message();
 		return (0);
 	}
-	//print_linkedlist(stack_a);
 	sort(&stack_a, &stack_b);
-	/*printf("\n2.Stack A: ");
-	print_linkedlist(stack_a);
-	printf("\n");
-	printf("2.Stack B: ");
-	printf("\n");*/
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

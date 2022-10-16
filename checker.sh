@@ -1,13 +1,13 @@
 #!bin/bash
 
 PUSH_SWAP=./push_swap
-CHECKER=./checker/checker_linux
+CHECKER=./checker/checker_Mac
 
-GREEN="\e[32m"
-RED="\e[91m"
-YELLOW="\e[33m"
-BOLD="\e[1m"
-RESET="\e[0m"
+GREEN="\033[0;32m"
+RED="\033[0;91m"
+YELLOW="\033[0;33m"
+BOLD="\033[0;1m"
+RESET="\033[0;0m"
 
 echo "
 ..................................

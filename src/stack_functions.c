@@ -6,7 +6,7 @@
 /*   By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:58:54 by ecabanas          #+#    #+#             */
-/*   Updated: 2022/09/30 16:17:15 by ecabanas         ###   ########.fr       */
+/*   Updated: 2022/10/16 17:48:45 by ecabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"

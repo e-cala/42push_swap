@@ -6,7 +6,7 @@
 #    By: ecabanas <ecabanas@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 12:15:58 by ecabanas          #+#    #+#              #
-#    Updated: 2022/10/02 12:16:02 by ecabanas         ###   ########.fr        #
+#    Updated: 2022/10/16 17:23:31 by ecabanas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ HEADER	=	includes/push_swap.h
 CC		= 	gcc
 CFLAGS	= 	-Wall -Wextra -Werror -MMD
 RM		= 	rm -f
-CHECKER	= 	./push_swap $(ARG) | ./checker/checker_linux $(ARG)
+CHECKER	= 	./push_swap $(ARG) | ./checker/checker_Mac $(ARG)
 
 ##Revisar esta variable de entorno y ver como funciona
 SHELL	=	/bin/sh
