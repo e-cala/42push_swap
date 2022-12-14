@@ -24,7 +24,7 @@ HEADER	=	includes/push_swap.h
 CC		= 	gcc
 CFLAGS	= 	-Wall -Wextra -Werror -MMD
 RM		= 	rm -f
-CHECKER	= 	./push_swap $(ARG) | ./checker/checker_Mac $(ARG)
+CHECKER		=	./push_swap $(ARG) | ./checker/checker_Mac $(ARG)
 
 ##Revisar esta variable de entorno y ver como funciona
 SHELL	=	/bin/sh

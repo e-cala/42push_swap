@@ -51,6 +51,7 @@ void	radix_sort(t_stack **head_a, t_stack **head_b);
 int		get_max_bits(t_stack **head);
 
 /*	input_check.c	*/
+int	ft_strlen(const char *s);
 int		is_duplicate(t_stack *head);
 int		ft_atoi(const char *s, int *value);
 int		check_input(int argc, char **argv, t_stack **head);

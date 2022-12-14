@@ -1,3 +1,7 @@
-.o
-.out
-.swp
+*.bin
+*DS_Store
+*.o
+*.d
+*.out
+*.swp
+push_swap

@@ -11,6 +11,19 @@
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
 
+/*ft_strlen:
+ * returns the number of chars
+ */
+int	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
 /*is_duplicate:
  * Checks the entire linked list for duplicate numbers
  * Returns the number of duplicated values
@@ -45,16 +58,16 @@ int	is_duplicate(t_stack *head)
  */
 int	ft_atoi(const char *s, int *value)
 {
-	int	num;
-	int	i;
-	int	sign;
+	long int	num;
+	int		i;
+	int		sign;
 
 	num = 0;
 	i = 0;
 	sign = 1;
-	if (!s && (s[i] != '-' || is_digit(s[i])))
+	if (!s && ft_strlen(s) > 11 &&(s[i] != '-' || is_digit(s[i])))
 		return (0);
-	if (s[i] == '-')
+	if (s[i] == '-' && is_digit(s[i + 1]))
 	{
 		sign = -1;
 		i++;
@@ -66,7 +79,7 @@ int	ft_atoi(const char *s, int *value)
 		num = (num * 10) + s[i] - '0';
 		i++;
 	}
-	if ((sign * num) >= INT_MAX || (sign * num) <= INT_MIN)
+	if ((sign * num) > INT_MAX || (sign * num) < INT_MIN)
 		return (0);
 	*value = sign * num;
 	return (1);
